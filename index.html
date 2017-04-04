@@ -82,7 +82,7 @@ Parse.serverURL = 'https://pg-app-g9028yfjrxc0eui9zksyed958dkglf.scalabl.cloud/1
 
                             var Order = Parse.Object.extend("Orders");
                             var orderQuery = new Parse.Query(Order);
-                            var q = orderQuery.notContainedIn("chefs",["Navi","Neelima","Narsimha"]);
+                            var q = orderQuery.descending("chefs");
                             q.find().then(function (results){
 
                                 var data = {};
